@@ -1,0 +1,328 @@
+@font-face {
+  font-family: 'Netflix Regular';
+  src: url('https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v2/NetflixSans-Regular-Opt.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Netflix Medium';
+  src: url('https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v2/NetflixSans-Medium-Opt.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Netflix Icons';
+  src: url('https://assets.nflxext.com/ffe/siteui/fonts/nf-icon-v1-93.woff') format('woff');
+}
+.icon-search:before, .icon-notification:before {
+  font-family: 'Netflix Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.icon-search:before {
+  content: '\e636';
+}
+.icon-notification:before {
+  content: '\e663';
+}
+.txt-nav-primary, .nav-primary .nav-item {
+  color: white;
+  font-family: 'Netflix Regular';
+  font-size: 14px;
+  line-height: 17px;
+    justify-content: space-between;
+   
+}
+.txt-big {
+  font-size: 6vw;
+  line-height: 6vw;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.txt-med {
+  font-size: 2.5vw;
+  width: 100%;
+  margin-top: 0;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+.txt-uppercase {
+  text-transform: uppercase;
+}
+* {
+  font-family: 'Netflix Regular';
+  color: white;
+}
+body {
+  margin-top: -68px;
+  opacity: 1;
+  transition: transform 3s, opacity 1s;
+  transform: scale(1);
+  background: #141414;
+}
+.container-fluid{ 
+ padding-bottom: 200px;
+}
+body.zoom {
+  opacity: 0;
+  transform: scale(1.1);
+}
+body.scroll #header {
+  background: #141414;
+}
+#header {
+  transition: background 0.6s;
+  background-color: #2d2c39 ;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+#header .container, #header .header-left, #header .header-right {
+  display: flex;
+  align-items: center;
+}
+#header .container {
+  height: 68px;
+
+}
+#header [class*="icon-"] {
+  font-size: 1.3em;
+}
+.nav > ul {
+  list-style: none;
+  display: flex;
+}
+.nav li {
+  margin: 0 20px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+
+}
+.nav li:nth-child(2) {
+  margin-top: -10px;
+  margin-right: 70px;
+}
+.nav-primary .nav-item {
+    padding:50px;
+  margin-left: 18px;
+   justify-content: space-between;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+/***********************************/
+/***********************************/
+.stage {
+  background: black;
+  /*height : 100vh;*/
+  width: 100vw;
+}
+.stage .stage-inner {
+  position: relative;
+}
+.stage .stage-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+23,000000+100&1+23,0+100 */
+  background: -moz-linear-gradient(left, black 23%, rgba(0, 0, 0, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, black 23%, rgba(0, 0, 0, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, black 23%, rgba(0, 0, 0, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000',GradientType=1);
+  /* IE6-9 */
+}
+.stage .stage-meta {
+  position: absolute;
+  top: 10vh;
+  left: 10vh;
+  z-index: 10;
+}
+
+.logo img {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.buttons {
+  background-color: #e50914;
+  padding: 7px 17px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 3px;
+}
+
+
+#logo {
+ height: 50px;
+ width: 80px;
+   margin-top: 2px;
+   left:0;
+}
+.fadeinout
+{
+  animation: fadeinout 4s infinite;
+  background-color:#fff;
+    border:1px solid red;    
+    height:100px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    width:100px;
+}
+
+@keyframes fadeinout
+{
+  0%{
+    opacity:0;
+  }
+  50%
+  {
+    opacity:1;
+  }
+  100%
+  {
+    opacity:0;
+  }
+}
+/***********************************/
+/***********************************/
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+.embed-responsive:before {
+  display: block;
+  content: "";
+}
+.embed-responsive-16by7:before {
+  padding-top: 43.75%;
+}
+.embed-responsive-16by9:before {
+  padding-top: 56.25%;
+}
+.embed-responsive-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/***********************************/
+/***********************************/
+.searchbar input {
+  opacity: 0;
+  box-sizing: border-box;
+  padding-left: 10px;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  border: 0;
+  transition: width 0.6s;
+  width: 0;
+}
+.searchbar .searchbar-outer, .searchbar .searchbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchbar .searchbar-outer {
+  border: 0px solid white;
+  background: none;
+  padding: 6px;
+  display: flex;
+}
+.searchbar .icon-search {
+  display: flex;
+}
+.searchbar.open input {
+  width: 200px;
+  opacity: 1;
+}
+.searchbar.open .searchbar-outer {
+  border-width: 1px;
+  background: #141414;
+}
+/***********************************/
+/***********************************/
+.btn {
+  background-color: rgba(51, 51, 51, 0.4);
+  border-width: 0;
+  padding: 0.75em 2.3em;
+  height: 1.2vw;
+  -webkit-border-radius: 0.2vw;
+  -moz-border-radius: 0.2vw;
+  border-radius: 0.2vw;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 1.1vw;
+}
+.btn-list {
+  font-size: 16px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background: rgba(51, 51, 51, 0.4);
+  padding: 0;
+  height: 24px;
+  width: 24px;
+}
+.btn-list:before {
+  font-size: 16px;
+  line-height: 1;
+  font-family: 'Netflix Regular';
+  font-weight: 100;
+  content: '+';
+}
+/***********************************/
+/***********************************/
+
+
+.row__inner:hover {
+  transform: translate3d(-62.5px, 0, 0);
+}
+.row__inner:hover .tile {
+  opacity: 0.3;
+}
+.row__inner:hover .tile:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+.row__inner:hover .tile:hover .tile__title {
+  opacity: 1;
+}
+.tile:hover ~ .tile {
+  transform: translate3d(125px, 0, 0);
+}

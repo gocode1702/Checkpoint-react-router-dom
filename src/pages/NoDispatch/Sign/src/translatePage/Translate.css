@@ -1,0 +1,8 @@
+body {
+	top: 0px !important;
+}
+
+/* hidden header  */
+body > .skiptranslate {
+	display: none;
+}
